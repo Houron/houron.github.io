@@ -1,0 +1,151 @@
+/* Stili generali */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #febd69;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centra il testo */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #dcdcdc;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0; /* Ridotto il padding verticale */
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Aggiunto per assicurarsi che il footer inizi dal bordo sinistro */
+    width: 100%; /* Assicura che il footer occupi tutta la larghezza della pagina */
+    box-sizing: border-box; /* Include il padding nella larghezza totale */
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Spazio tra i bottoni */
+    margin: 0 auto;
+    max-width: 100%; /* Assicura che il container dei bottoni non vada oltre la larghezza schermo */
+    box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #febd69;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* sempre per padding e bordo nella larghezza totale */
+}
+
+.button:hover {
+    background-color: #fea736;
+}
+
+
+button.search-button {
+    padding: 8px 20px;
+    background-color: #febd69;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.search-button:hover {
+    background-color: #fea736;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Centra il contenuto lungo l'asse orizzontale */
+    margin-bottom: 20px; /* Aggiunto per spaziatura uniforme */
+}
+
+.search-input {
+    flex: 1; /* Il campo di ricerca occupa lo spazio rimanente */
+    padding: 8px; /* Aggiunto padding per un migliore spazio interno */
+    margin-right: 10px; /* Aggiunto margine a destra per separazione */
+    border-radius: 5px; /* Arrotondamento dei bordi */
+    border: 1px solid #ccc; /* Aggiunto bordo per migliorare la visibilità */
+    max-width: 300px; /* Limite massimo di larghezza */
+}
+
+/* Stili per centrare e giustificare il paragrafo */
+.content-section {
+    display: flex;
+    justify-content: center; /* Centro il contenuto */
+}
+
+.content {
+    max-width: 800px; /* Limite massimo di larghezza per un miglior layout */
+    text-align: justify; /* Giustifica il testo */
+}
+
+/* Stili per dispositivi mobili */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .button {
+	flex: 1 1 calc(50% - 20px); /* Ogni bottone occupa il 50% della larghezza meno lo spazio tra i bottoni */
+        width: 100%;
+        margin: 5px 0;
+	box-sizing: border-box;
+    }
+
+    footer {
+        position: static;
+    }
+}
