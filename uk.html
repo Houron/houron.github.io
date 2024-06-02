@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Amaz...ing Seller!(UK)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f262ccd9d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="home-icon"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <!-- Aggiungi altri link alle pagine -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Only Amaz...ing Seller!(UK)</h1>
+	<h2>Buy items on the most famous online store, looking exclusively for products Sold and Shipped by them!</h2>
+	<div class="search-container">
+        <input class="search-input" type="text" id="searchInput" placeholder="What do you want to buy?">
+        <button class="search-button" id="searchButton">Search</button>
+    	</div>
+
+    	<script>
+        	const searchInput = document.getElementById('searchInput');
+        	const searchButton = document.getElementById('searchButton');
+
+        	searchButton.addEventListener('click', search);
+        	searchInput.addEventListener('keydown', function(event) {
+            	if (event.key === 'Enter') {
+                	search();
+            	}
+        });
+
+        function search() {
+            var searchKeywords = searchInput.value;
+
+            if (searchKeywords) {
+                var amazonUrl = 'https://www.amazon.co.uk/s?k=' + encodeURIComponent(searchKeywords) + '&emi=A3P5ROKL5A1OLE';
+                window.open(amazonUrl, '_blank');
+            }
+        }
+    </script>
+
+    <section class="content-section">
+      <div class="content">
+	<p><h3>Why buy products sold and shipped by Amazon?</h3>
+	When an item is sold and shipped by Amazon, shipping is FREE on orders £25 or more, and if you're a Prime customer, shipping is free regardless of the order amount.
+	<br>
+	In addition, Amazon's warranty and return conditions apply:
+	<ul>
+	<li>you have 30 days from the delivery date to return the item, without specifying the reason</li>
+	<li>you have a 2-year warranty and you can get a refund of the total amount paid at the time of purchase or replacement of the item</li>
+	<li>In case of return, shipments are paid by Amazon with collection by courier or delivery to a post office closest to you.</li>
+	</ul>
+	But it is necessary that the products are <strong>SOLD</strong> and <strong>SHIPPED</strong> by Amazon!</p>
+      </div>        
+     </section>
+<div>
+<footer>
+        <p>Made by Raffaele Bella</p>
+</footer>
+</div>
+</body>
+</html>

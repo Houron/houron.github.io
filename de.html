@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Amaz...ing Seller!(DE)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f262ccd9d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="home-icon"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <!-- Aggiungi altri link alle pagine -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Only Amaz...ing Seller!(DE)</h1>
+	<h2>Kaufen Sie Artikel im berühmtesten Online-Shop und suchen Sie ausschließlich nach Produkten, die dort verkauft und versendet werden!</h2>
+	<div class="search-container">
+        <input class="search-input" type="text" id="searchInput" placeholder="Was möchten Sie vergleichen?">
+        <button class="search-button" id="searchButton">Suchen</button>
+    	</div>
+
+    	<script>
+        	const searchInput = document.getElementById('searchInput');
+        	const searchButton = document.getElementById('searchButton');
+
+        	searchButton.addEventListener('click', search);
+        	searchInput.addEventListener('keydown', function(event) {
+            	if (event.key === 'Enter') {
+                	search();
+            	}
+        });
+
+        function search() {
+            var searchKeywords = searchInput.value;
+
+            if (searchKeywords) {
+                var amazonUrl = 'https://www.amazon.de/s?k=' + encodeURIComponent(searchKeywords) + '&emi=A3JWKAKR8XB7XF';
+                window.open(amazonUrl, '_blank');
+            }
+        }
+    </script>
+
+    <section class="content-section">
+      <div class="content">
+	<p><h3>Warum Produkte kaufen, die von Amazon verkauft und versendet werden?</h3>
+	Wenn ein Artikel von Amazon verkauft und versendet wird, ist der Versand ab einem Bestellwert von 29 €. Wenn Sie Prime-Kunde sind, ist der Versand unabhängig vom Bestellwert kostenlos.
+	<br>
+	Darüber hinaus gelten die Garantie- und Rückgabebedingungen von Amazon:
+	<ul>
+	<li>Sie haben ab dem Lieferdatum 30 Tage Zeit, den Artikel ohne Angabe von Gründen zurückzusenden</li>
+	<li>Sie haben eine 2-jährige Garantie und können eine Rückerstattung des Gesamtbetrags erhalten, den Sie zum Zeitpunkt des Kaufs oder Austauschs des Artikels gezahlt haben</li>
+	<li>Im Falle einer Rücksendung erfolgt die Bezahlung der Sendungen durch Amazon mit Abholung per Kurier oder Zustellung an eine Postfiliale in Ihrer Nähe.</li>
+	</ul>
+	Es ist jedoch erforderlich, dass die Produkte über Amazon <strong>VERKAUFT</strong> und <strong>VERSANDT</strong> werden!</p>
+      </div>        
+     </section>
+<div>
+<footer>
+        <p>Erstellt von Raffaele Bella</p>
+</footer>
+</div>
+</body>
+</html>

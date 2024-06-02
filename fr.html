@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Amaz...ing Seller!(FR)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f262ccd9d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="home-icon"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <!-- Aggiungi altri link alle pagine -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Only Amaz...ing Seller!(FR)</h1>
+	<h2>Achetez des articles sur la boutique en ligne la plus célèbre, en recherchant exclusivement les produits vendus et expédiés par eux !</h2>
+	<div class="search-container">
+        <input class="search-input" type="text" id="searchInput" placeholder="Que veux-tu acheter ?">
+        <button class="search-button" id="searchButton">Recherche</button>
+    	</div>
+
+    	<script>
+        	const searchInput = document.getElementById('searchInput');
+        	const searchButton = document.getElementById('searchButton');
+
+        	searchButton.addEventListener('click', search);
+        	searchInput.addEventListener('keydown', function(event) {
+            	if (event.key === 'Enter') {
+                	search();
+            	}
+        });
+
+        function search() {
+            var searchKeywords = searchInput.value;
+
+            if (searchKeywords) {
+                var amazonUrl = 'https://www.amazon.fr/s?k=' + encodeURIComponent(searchKeywords) + '&emi=A1X6FK5RDHNB96';
+                window.open(amazonUrl, '_blank');
+            }
+        }
+    </script>
+
+    <section class="content-section">
+      <div class="content">
+	<p><h3>Pourquoi acheter des produits vendus et expédiés par Amazon ?</h3>
+	Lorsqu'un article est vendu et expédié par Amazon, l'expédition est GRATUITE pour les commandes de 29 € ou plus, et si vous êtes un client Prime, l'expédition est gratuite quel que soit le montant de la commande.
+	<br>
+	De plus, les conditions de garantie et de retour d'Amazon s'appliquent :
+	<ul>
+	<li>vous disposez d'un délai de 30 jours à compter de la date de livraison pour retourner l'article, sans en préciser le motif</li>
+	<li>vous bénéficiez d'une garantie de 2 ans et vous pouvez obtenir le remboursement du montant total payé au moment de l'achat ou du remplacement de l'article</li>
+	<li>En cas de retour, les envois sont payés par Amazon avec enlèvement par coursier ou livraison dans un bureau de poste le plus proche de chez vous.</li>
+	</ul>
+	Mais il faut que les produits soient <strong>VENDUS</strong> et <strong>EXPÉDIÉS</strong> par Amazon !</p>
+      </div>        
+     </section>
+<div>
+<footer>
+        <p>Réalisé par Raffaele Bella</p>
+</footer>
+</div>
+</body>
+</html>

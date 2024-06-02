@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Amaz...ing Seller!(BR)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f262ccd9d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="home-icon"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <!-- Aggiungi altri link alle pagine -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Only Amaz...ing Seller!(BR)</h1>
+	<h2>Compre itens nas lojas online mais famosas, procurando exclusivamente os produtos Vendidos e Enviados por eles!</h2>
+	<div class="search-container">
+        <input class="search-input" type="text" id="searchInput" placeholder="O que você quer comprar?">
+        <button class="search-button" id="searchButton">Procurar</button>
+    	</div>
+
+    	<script>
+        	const searchInput = document.getElementById('searchInput');
+        	const searchButton = document.getElementById('searchButton');
+
+        	searchButton.addEventListener('click', search);
+        	searchInput.addEventListener('keydown', function(event) {
+            	if (event.key === 'Enter') {
+                	search();
+            	}
+        });
+
+        function search() {
+            var searchKeywords = searchInput.value;
+
+            if (searchKeywords) {
+                var amazonUrl = 'https://www.amazon.com.br/s?k=' + encodeURIComponent(searchKeywords) + '&emi=A1ZZFT5FULY4LN';
+                window.open(amazonUrl, '_blank');
+            }
+        }
+    </script>
+
+    <section class="content-section">
+      <div class="content">
+	<p><h3>Por que comprar produtos vendidos e enviados pela Amazon?</h3>
+	Quando um item é vendido e enviado pela Amazon, o frete é GRATUITO para pedidos de R$ 129 ou mais e, se você for um cliente Prime, o frete é grátis, independentemente do valor do pedido.
+	<br>
+	Além disso, aplicam-se as condições de garantia e devolução da Amazon:
+	<ul>
+	<li>você tem 30 dias a partir da data de entrega para devolver o item, sem especificar o motivo</li>
+	<li>você tem garantia de 2 anos e pode obter o reembolso do valor total pago no momento da compra ou substituição do item</li>
+	<li>Em caso de devolução, os envios são pagos pela Amazon com recolha por estafeta ou entrega na agência dos correios mais próxima de si.</li>
+	</ul>
+	Mas é necessário que os produtos sejam <strong>VENDIDOS</strong> e <strong>ENVIADOS</strong> pela Amazon!</p>
+      </div>        
+     </section>
+<div>
+<footer>
+        <p>Made by Raffaele Bella</p>
+</footer>
+</div>
+</body>
+</html>
