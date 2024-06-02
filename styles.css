@@ -145,6 +145,14 @@ button.search-button:hover {
 	box-sizing: border-box;
     }
 
+    h1 {
+        font-size: 1.8em; /* Riduce la dimensione del font per h1 */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Riduce la dimensione del font per h2 */
+    }
+
     footer {
         position: static;
     }
